@@ -2,7 +2,7 @@
 #include <fstream>
 #include <filesystem>
 #include <string>
-#include <Windows.h>
+#include <windows.h>
 namespace fs = std::filesystem;
 
 
