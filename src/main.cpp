@@ -8,11 +8,11 @@ namespace fs = std::filesystem;
 
 std::string find_directory(const fs::path& root, const std::string& dirName, fs::perm_options opts = fs::perm_options::replace) {
     try {
-        std::string s;
+        
         for (const auto& entry : fs::recursive_directory_iterator(root)) {
             if (entry.is_directory() && entry.path().filename() == dirName) {
                 std::cout << entry.path();
-                s = entry.path().u8string();
+                const std::string s = entry.path().u8string();
                 return s;
             }
         }
